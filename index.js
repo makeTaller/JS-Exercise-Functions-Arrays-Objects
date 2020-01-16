@@ -64,10 +64,9 @@ function makePersonObject(id,name,email) {
 */
 function getName(name){
 	person = {
-		name:name
+	        name:`Hello, my name is ${name}`
 	}
-
-	return `Hello, my name is ${person.name}`
+	return person
 }
 
 /**
@@ -83,7 +82,14 @@ function getName(name){
  *         and returns a string like `Hello, my name is {name}`.
  *         where `{name}` is the name passed into `makeSmartPerson`.
 */
-function makeSmartPerson(/* code here */) {
+function makeSmartPerson(name,num1,num2) {
+	action  = {
+		name:name,
+		sum:num1+num2,
+		speak:`Hello, my name is ${name}`,
+	}
+
+	return action
   /* code here */
 }
 
