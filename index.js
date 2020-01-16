@@ -66,7 +66,7 @@ function getName(name){
 	person = {
 	        name:`Hello, my name is ${name}`
 	}
-	return person
+	return person.name
 }
 
 /**
@@ -152,7 +152,10 @@ function get3rdCar(inventory) {
  * it will return `This is a Lincoln Navigator`.
 */
 function getCarInfoByIndex(inventory, index) {
-  /* code here */
+	theIndex = inventory.find((item,index) => {
+		return index === index 
+	})
+	return `This is a ${theIndex.car_make} ${theIndex.car_model}`
 }
 
 /**
