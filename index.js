@@ -62,11 +62,8 @@ function makePersonObject(id,name,email) {
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName(name){
-	person = {
-	        name:`Hello, my name is ${name}`
-	}
-	return person.name
+function getName(person){
+	return `Hello, my name is ${person.name}`
 }
 
 /**
@@ -82,15 +79,14 @@ function getName(name){
  *         and returns a string like `Hello, my name is {name}`.
  *         where `{name}` is the name passed into `makeSmartPerson`.
 */
-function makeSmartPerson(name,num1,num2) {
+function makeSmartPerson(name) {
 	action  = {
 		name:name,
-		sum:num1+num2,
-		speak:`Hello, my name is ${name}`,
+		sum:(num1,num2)=>num1 + num2,
+		speak:()=>`Hello, my name is ${name}`,
 	}
 
 	return action
-  /* code here */
 }
 
 
@@ -170,8 +166,9 @@ function getCarInfoByIndex(inventory, index) {
  * it will return `This is a Lincoln Town Car`.
 */
 function getLastCarInfo(inventory) {
-	car = inventory.pop();
-	return `This is a ${car.car_make} ${car.car_model}`
+	// car = inventory.pop();
+	console.log(inventory[49].car_model)
+	return `This is a ${inventory[49].car_make} ${inventory[49].car_model}`
 	 }
 
 /**
@@ -298,9 +295,13 @@ function getGermanCars(inventory) {
  *   return num * 2
  * }
 */
-const sum = null; // code here!
-const addFive = null; // code here!
-const argTimesTwo = null; // code here!
+const sum = (a,b) =>{
+	return a +b; // code here!
+}
+
+const addFive = (num) => num +5; // code here!
+
+const argTimesTwo = (num) => num *2; // code here!
 
 /**
  * ### Challenge `carMaker`
