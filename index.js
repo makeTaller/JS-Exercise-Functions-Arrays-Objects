@@ -318,11 +318,10 @@ const argTimesTwo = (num) => num *2; // code here!
 */
 function carMaker(odometer) {
 	cluster = {
-		odometer:this.odometer,
-		drive:(distance)=>odometer + distance,
+		odometer: odometer,
+		drive: (distance) => odometer += distance,
 	}
-
-	return cluster
+	return cluster.drive()
 }
 
 /// ////// END OF CHALLENGE /////////
